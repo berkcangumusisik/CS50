@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Sıralanmış metinler üzerinde çalışırken, sort3'e kıyasla biraz daha az zaman alır
+
+sort2 uses: Merge Sort
+
+How do you know?: Hepsine göre en hızlısıdır.
+
+sort3 uses: Selection Sort
+
+How do you know?: Sıralamadan ziyade sıralanmış metin üzerinde çalışırken bile zorlanır.
