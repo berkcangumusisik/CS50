@@ -18,3 +18,8 @@ CS50 2018 dersinin Türkçe halini incelemek için: https://www.kodluyoruz.org/c
 * Flask 
 * Ethics
 ### Bu repoyu günlük çalıştıklarımı değilde her haftanın bitiminde notları bu repo içerisinde bulabilirsiniz. Sadece Scratch notlarım yer almayacak. Çünkü onları derlemek biraz daha zor olacaktır.
+
+# SERTİFİKA
+![CS50x](https://user-images.githubusercontent.com/75336900/129449742-1795707f-c5d2-4297-907d-7a47d837a7d8.png)
+![CS50X KODLUYORUZ](https://user-images.githubusercontent.com/75336900/129449791-0ba15fd8-ef4e-487d-8c27-3fa06dcc4452.png)
+
