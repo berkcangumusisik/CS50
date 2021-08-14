@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <form action="/register" method="post">
+
+         <!-- Username -->
+        <div class="form-group">
+        <input type="text" id="name" name="username" class="form-control"  placeholder="Username" autocomplete="off" autofocus onkeyup="manage(this)"/>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+        <input type="password" id="pass" name="password" class="form-control"  placeholder="Password" onkeyup="manage(this)" />
+        </div>
+
+        <!-- Confirmation -->
+        <div class="form-group">
+        <input type="password" id="pass1" name="confirmation" class="form-control" placeholder="Password (again)" onkeyup="manage(this)" />
+        </div>
+
+        <!-- Button -->
+        <button id="submit" class="btn btn-primary" type="submit" disabled>Register</button>
+
+    </form>
+
+    <script>
+        function manage(txt) {
+            var bt = document.getElementById('submit');
+            var ele = document.getElementsByTagName('input');
+
+            // Loop through each element.
+            for (i = 0; i < ele.length; i++) {
+
+                // Check the element type.
+                if ((ele[i].type == 'text' || ele[i].type == 'password') && ele[i].value == '') {
+                    bt.disabled = true;    // Disable the button.
+                    return false;
+                }
+                else {
+                    bt.disabled = false;   // Enable the button.
+                }
+            }
+        }
+    </script>
+
+{% endblock %}

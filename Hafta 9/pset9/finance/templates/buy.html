@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+
+    <form action="/buy" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus="" class="form-control" name="symbol" placeholder="Symbol" type="text" onkeyup="manage(this)">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" min="1" name="shares" placeholder="Shares" type="number">
+        </div>
+        <button id="submit" class="btn btn-primary" type="submit" disabled>Buy</button>
+    </form>
+
+    <script>
+    function manage(txt) {
+        var bt = document.getElementById('submit');
+        if (txt.value != '') {
+            bt.disabled = false;
+        }
+        else {
+            bt.disabled = true;
+        }
+    }
+    </script>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Qouted
+{% endblock %}
+
+{% block main %}
+
+    <p>
+        You Qouted for :
+        <table class="table table-striped">
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>{{stock["symbol"]}}</td>
+                <td>{{stock["name"]}}.</td>
+                <td>${{stock["price"]}}</td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        Click <a href = "/buy">here</a> to Buy </p>
+    </p>
+
+{% endblock %}

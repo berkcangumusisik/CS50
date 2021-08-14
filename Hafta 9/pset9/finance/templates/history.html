@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Potfolio
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped" style="text-align:left">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Transacted</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for stock in stocks %}
+            <tr>
+                <td>{{stock["symbol"]}}</td>
+                <td>{{stock["shares"]}}</td>
+                <td>{{stock["price"]}}</td>
+                <td>{{stock["total"]}}</td>
+                <td>{{stock["datetime"]}}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+{% endblock %}

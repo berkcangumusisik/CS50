@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Qoute
+{% endblock %}
+
+{% block main %}
+
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus="" class="form-control" name="symbol" placeholder="Symbol" type="text" onkeyup="manage(this)">
+        </div>
+        <button id="submit" class="btn btn-primary" type="submit" disabled>Quote</button>
+    </form>
+
+    <script>
+    function manage(txt) {
+        var bt = document.getElementById('submit');
+        if (txt.value != '') {
+            bt.disabled = false;
+        }
+        else {
+            bt.disabled = true;
+        }
+    }
+    </script>
+
+{% endblock %}

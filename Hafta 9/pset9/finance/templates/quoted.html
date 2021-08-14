@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <h6>Name:{{row['name']}}</h6>
+    <h6>Price:"{{row['price']}}"</h6>
+    <h6>Symbol:{{row['symbol']}}</h6>
+{% endblock %}

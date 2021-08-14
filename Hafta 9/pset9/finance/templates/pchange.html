@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+
+    <form action="/pchange" method="post">
+
+         <!-- Old Password -->
+        <div class="form-group">
+        <input type="password" id="name" name="old" class="form-control"  placeholder="Old Password" autocomplete="off" autofocus onkeyup="manage(this)"/>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+        <input type="password" id="pass" name="pass1" class="form-control"  placeholder="New Password" onkeyup="manage(this)" />
+        </div>
+
+        <!-- Confirmation -->
+        <div class="form-group">
+        <input type="password" id="pass1" name="pass2" class="form-control" placeholder="New Password (again)" onkeyup="manage(this)" />
+        </div>
+
+        <!-- Button -->
+        <button id="submit" class="btn btn-primary" type="submit" disabled>Change Password</button>
+
+    </form>
+
+    <script>
+        function manage(txt) {
+            var bt = document.getElementById('submit');
+            var ele = document.getElementsByTagName('input');
+
+            // Loop through each element.
+            for (i = 0; i < ele.length; i++) {
+
+                // Check the element type.
+                if (ele[i].type == 'password' && ele[i].value == '') {
+                    bt.disabled = true;    // Disable the button.
+                    return false;
+                }
+                else {
+                    bt.disabled = false;   // Enable the button.
+                }
+            }
+        }
+    </script>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" onkeyup="manage(this)">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password" onkeyup="manage(this)">
+        </div>
+        <button id="submit"class="btn btn-primary" type="submit" disabled>Log In</button>
+    </form>
+
+    <script>
+        function manage(txt) {
+            var bt = document.getElementById('submit');
+            var ele = document.getElementsByTagName('input');
+
+            // Loop through each element.
+            for (i = 0; i < ele.length; i++) {
+
+                // Check the element type.
+                if ((ele[i].type == 'text' || ele[i].type == 'password') && ele[i].value == '') {
+                    bt.disabled = true;    // Disable the button.
+                    return false;
+                }
+                else {
+                    bt.disabled = false;   // Enable the button.
+                }
+            }
+        }
+    </script>
+{% endblock %}
